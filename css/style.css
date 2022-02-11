@@ -11,6 +11,12 @@ body{
     background-color: black;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /***** HEADER *****/
 
 header{
@@ -61,8 +67,76 @@ main{
 /***** FOOTER *****/
 
 footer{
-    background-color: grey;
-    border: 2px dashed white;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(36, 35, 35);
+    /*border: 2px dashed white;*/
+}
+
+.mic-video{
+    width: 25%;
+    /*border: 2px dashed white;*/  
+}
+
+.footer-command{
+    width: 50%;  
+    justify-content: space-around;
+    /*border: 2px dashed white;*/   
+}
+
+.end-call{
+    width: 25%;
+    /*border: 2px dashed white;*/   
+}
+
+.command ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.command .active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.active > i{
+    font-size: 25px;
+    padding: 10px;
+}
+
+.fa-share-square{
+    color: greenyellow;
+}
+
+.angle{
+    padding-top: 30px;
+}
+
+.end-call{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#end{
+    width: 100px;
+    height: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+
+#end a{
+    color: red;
+    text-decoration: none;
+    font-size: 12px;
 }
 
 /***** / FOOTER *****/
